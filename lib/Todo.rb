@@ -1,14 +1,17 @@
 class Todo 
 
-  @@list = []
-
-  def self.all 
-    return nil if @@list.empty?
-    @@list
+  def all 
+    return nil if @list.empty?
+    @list 
   end 
 
-  def self.create(string)
-    @@list << string 
+  def create(string)
+    @list << string 
   end
 
+  attr_reader :list
+  
+  def initialize
+    @list = []
+  end 
 end 

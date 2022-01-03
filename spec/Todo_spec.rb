@@ -1,12 +1,14 @@
 describe Todo do
 
+  let(:todo_list) {Todo.new}
+  
   it 'Returns nil when there are no todos' do
-    expect(Todo.all).to eq nil  
+    expect(subject.all).to eq nil  
   end 
 
   it 'Can store a todo' do 
-    Todo.create("Buy Bread")
-    expect(Todo.all).to eq ["Buy Bread"] 
+    todo_list.create("Buy Bread")
+    expect(todo_list.all).to eq ["Buy Bread"] 
   end   
 
 end 
