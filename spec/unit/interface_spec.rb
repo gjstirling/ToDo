@@ -10,8 +10,10 @@ describe Interface do
     expect { subject }.to output("There are no ToDos").to_stdout
   end
 
-  # it 'prints welcome message 2' do 
-  #   expect(subject.message).to eq "There are no ToDo's"
-  # end
+  it 'check that the program starts with an empty list' do
+    expect(subject.list).to eq([])
+  end
 
+ # it 'enables you to add a ToDo' do
+    
 end 
