@@ -5,8 +5,8 @@ class Todo
     @list 
   end 
 
-  def create(string)
-    @list << string 
+  def create(task)
+    @list << task 
   end
 
   attr_reader :list
