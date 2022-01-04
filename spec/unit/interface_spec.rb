@@ -15,6 +15,8 @@ describe Interface do
   end
 
   it 'enables you to add a ToDo' do
+    task = double("task")
+    allow(task).to receive(:content) { "Buy Bread" }
     expect { subject.add("Buy Bread") }.to output("\"1 Buy Bread\"\n").to_stdout
   end
   
