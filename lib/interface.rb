@@ -10,6 +10,10 @@ class Interface
     return @pending
   end
 
+  def add(todo)
+    todo
+  end
+
   private
 
   def status

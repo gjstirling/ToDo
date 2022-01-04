@@ -14,6 +14,8 @@ describe Interface do
     expect(subject.list).to eq([])
   end
 
- # it 'enables you to add a ToDo' do
+  it 'enables you to add a ToDo' do
+    expect(subject.add("Buy bread")).to eq("Buy bread")
+  end
     
 end 
