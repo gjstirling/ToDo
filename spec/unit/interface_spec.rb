@@ -17,5 +17,10 @@ describe Interface do
   it 'enables you to add a ToDo' do
     expect(subject.add("Buy bread")).to eq("Buy bread")
   end
+
+  it 'enables you to add multiple ToDos and returns a list' do
+    subject.add("Buy bread")
+    expect(subject.add("Walk the dog")).to eq("Buy bread, Walk the dog")
+  end
     
 end 

@@ -11,7 +11,8 @@ class Interface
   end
 
   def add(todo)
-    todo
+    @pending << todo
+    @pending.join(", ")
   end
 
   private
