@@ -30,4 +30,6 @@ example: "1 Wash car\n2 Walk dog"
  
 Input                     output 
                  
-add buy bread             reprint full todo list  
+add buy bread             reprint full todo
+complete buy bread        Todo completed, reprint list        
+exit                      Application closed 
