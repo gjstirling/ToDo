@@ -1,9 +1,9 @@
 class Todo
 
-    attr_reader :task
+    attr_reader :content
 
-    def initialize(task)
-        @task = task
+    def initialize(content)
+        @content = content
         @completed = false
     end
 

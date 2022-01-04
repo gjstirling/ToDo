@@ -4,8 +4,8 @@ describe Todo do
 
     let(:todo) { Todo.new("Buy bread") }
     
-    it 'a Todo has a name' do
-       expect(todo.task).to eq("Buy bread")
+    it 'a Todo has content' do
+       expect(todo.content).to eq("Buy bread")
     end
 
     it 'is incomplete when created' do 

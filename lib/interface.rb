@@ -1,9 +1,7 @@
 class Interface 
 
-  
-  def initialize 
-    status
-    @pending = []
+  def initialize(pending = [])
+    @pending = pending
   end 
 
   def list
@@ -11,14 +9,14 @@ class Interface
   end
 
   def add(todo)
-    @pending << todo
-    @pending.join(", ")
+    @pending << Todo.new(todo)
+    @pending.each_with_index { |task, index|
+      p "#{index+1} " + task.content
+    }
   end
 
-  private
-
   def status
-    print "There are no ToDos"
+    p "There are no ToDos" if @pending.empty?
   end
 
 end 
