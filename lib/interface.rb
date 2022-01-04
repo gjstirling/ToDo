@@ -10,13 +10,14 @@ class Interface
 
   def add(todo)
     @pending << Todo.new(todo)
-    @pending.each_with_index { |task, index|
-      p "#{index+1} " + task.content
-    }
+    status
   end
 
   def status
     p "There are no ToDos" if @pending.empty?
+    @pending.each_with_index { |task, index|
+      p "#{index+1} " + task.content
+    }
   end
 
 end 
