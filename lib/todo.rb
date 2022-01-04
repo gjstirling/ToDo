@@ -4,5 +4,15 @@ class Todo
 
     def initialize(task)
         @task = task
+        @completed = false
     end
+
+    def status 
+        @completed
+    end 
+
+    def complete
+        @completed = true
+    end 
+
 end
