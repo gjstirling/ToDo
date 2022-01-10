@@ -1,5 +1,3 @@
-require '/Users/graemestirling/todo/lib/todo.rb'
-
 class Interface 
 
   attr_reader :todo_class

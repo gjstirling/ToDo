@@ -6,7 +6,7 @@ require 'interface'
 
 describe Interface do
 
-  let(:todo_double) { double("Todo", content: "Buy Bread") }
+  let(:todo_double) { double("Todo", content: @task) }
   let(:todo_class) { double('todo class', new: todo_double ) }
   let(:user) { Interface.new(todo_class) }
 
@@ -19,7 +19,14 @@ describe Interface do
   end
 
   it 'enables you to add a ToDo' do
-    expect { user.add("Buy Bread") }.to output("\"1 Buy Bread\"\n").to_stdout
+    @task = "Buy Bread"
+    expect { user.add(@task) }.to output("\"1 Buy Bread\"\n").to_stdout
+  end
+
+  it 'enables you to add a ToDo' do
+    @task = "Walk Dog"
+    user.add(@task)
+    expect { user.add(@task) }.to output("\"1 Walk Dog\"\n\"2 Walk Dog\"\n").to_stdout
   end
 
 end 
