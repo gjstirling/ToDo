@@ -1,6 +1,11 @@
+require '/Users/graemestirling/todo/lib/todo.rb'
+
 class Interface 
 
-  def initialize(pending = [])
+  attr_reader :todo_class
+
+  def initialize(todo_class = Todo, pending = [])
+    @todo_class = todo_class
     @pending = pending
   end 
 
@@ -9,7 +14,7 @@ class Interface
   end
 
   def add(todo)
-    @pending << Todo.new(todo)
+    @pending << @todo_class.new(todo)
     status
   end
 
